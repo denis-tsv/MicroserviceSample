@@ -1,0 +1,36 @@
+﻿services:
+  weather.webapi:
+    image: weather.webapi
+    build:
+      dockerfile: src/Weather.WebApi/Dockerfile
+    ports:
+      - '8080:8080'
+      - '8082:8082'
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: exactly-once
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    command: ["postgres", "-c", "log_statement=all"]
+  
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - '16686:16686'
+      - '4317:4317'
+    environment:
+      COLLECTOR_OTLP_ENABLED: 'true'
+
+  prometheus:
+    image: prom/prometheus:v2.53.4
+    volumes:
+      - ./dev/prometheus/:/etc/prometheus/
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    ports:
+      - '9090:9090'
+  

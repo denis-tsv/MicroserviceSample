@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="12.0.0" />
+      <PackageReference Include="linq2db.EntityFrameworkCore" Version="9.0.0" />
+      <PackageReference Include="MediatR" Version="12.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Weather.Infrastructure.Abstractions\Weather.Infrastructure.Abstractions.csproj" />
+    </ItemGroup>
+
+</Project>
