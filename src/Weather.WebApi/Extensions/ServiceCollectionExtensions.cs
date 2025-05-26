@@ -8,11 +8,11 @@ using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using Weather.Application.Services;
 using Weather.Domain.Services;
-using Weather.Infrastructure;
 using Weather.Infrastructure.Abstractions.DataAccess;
 using Weather.Infrastructure.Abstractions.Metrics;
 using Weather.Infrastructure.Abstractions.WeatherServiceClient;
 using Weather.Infrastructure.DataAccess;
+using Weather.Infrastructure.WeatherServiceClient;
 using Weather.WebApi.Mertics;
 
 namespace Weather.WebApi.Extensions;

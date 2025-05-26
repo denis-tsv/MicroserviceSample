@@ -3,9 +3,11 @@ using Microsoft.Extensions.Options;
 using Weather.Infrastructure.Abstractions.Metrics;
 using Weather.Infrastructure.Abstractions.WeatherServiceClient;
 
-namespace Weather.Infrastructure;
+namespace Weather.Infrastructure.WeatherServiceClient;
+
 public record CurrentWeatherResponse(Current Current);
 public record Current(float Temperature);
+
 public class WeatherStackServiceClient : IWeatherServiceClient
 {
     private readonly HttpClient _httpClient;

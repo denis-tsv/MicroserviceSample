@@ -1,4 +1,4 @@
-namespace Weather.Infrastructure;
+namespace Weather.Infrastructure.WeatherServiceClient;
 
 public class WeatherStackConfiguration
 {

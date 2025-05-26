@@ -1,9 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-      <RootNamespace>Weather.Infrastructure</RootNamespace>
-    </PropertyGroup>
-
     <ItemGroup>
       <ProjectReference Include="..\Weather.Infrastructure.Abstractions\Weather.Infrastructure.Abstractions.csproj" />
     </ItemGroup>
